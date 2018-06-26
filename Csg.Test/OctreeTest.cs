@@ -1,8 +1,4 @@
-﻿using System;
-using NUnit.Framework;
-
-using Csg;
-using static Csg.Solids;
+﻿using NUnit.Framework;
 
 namespace Csg.Test
 {

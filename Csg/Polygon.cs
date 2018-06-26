@@ -201,7 +201,7 @@ namespace Csg
 		{
 			return new Plane(Normal.Negated, -W);
 		}
-		public unsafe void SplitPolygon(Polygon polygon, out SplitPolygonResult result)
+		public void SplitPolygon(Polygon polygon, out SplitPolygonResult result)
 		{
 			result = new SplitPolygonResult();
 			var planenormal = this.Normal;
@@ -216,7 +216,7 @@ namespace Csg
 				var thisw = this.W;
 				var hasfront = false;
 				var hasback = false;
-				var vertexIsBack = stackalloc bool[numvertices];
+				var vertexIsBack = new bool[numvertices];
 				var MINEPS = -EPS;
 				for (var i = 0; i < numvertices; i++)
 				{
